@@ -1,0 +1,17 @@
+{
+  "name": "React Project with Vite",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "node": "22.13.1",
+    "npm": "latest"
+  },
+  "postCreateCommand": "npm install bootstrap react-router-dom",
+  "forwardPorts": [3000],
+  "settings": {
+    "editor.formatOnSave": true
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ]
+}
