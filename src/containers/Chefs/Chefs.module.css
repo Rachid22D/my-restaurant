@@ -1,0 +1,35 @@
+.chefsSection h2 {
+    margin-bottom: 30px !important;
+  }
+  
+  .chefsSection .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .chefsSection img {
+    margin-bottom: 20px;
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .chefsSection img:hover {
+    transform: scale(1.1);
+  }
+  
+  .chefsSection h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .chefsSection p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--primary-color);
+  }
+  

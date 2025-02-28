@@ -1,22 +1,23 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import TopBar from "../TopBar/TopBar";
 import styles from "./NavBar.module.css";
 
-
 const Navbar = () => {
-  // استخدام useLocation لتحديد الرابط النشط بناءً على المسار الحالي
+  // Get the current location to determine the active link
   const location = useLocation();
-  const [isSticky, setIsSticky] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  
+  // State variables to manage navbar behavior
+  const [isSticky, setIsSticky] = useState(false); // Controls sticky navbar
+  const [isHidden, setIsHidden] = useState(false); // Controls navbar visibility when scrolling
+  const [menuOpen, setMenuOpen] = useState(false); // Controls mobile menu visibility
+  const [isHovered, setIsHovered] = useState(false); // Checks if navbar is hovered
 
-  // مراجع لتخزين آخر قيمة scroll و timeout
+  // Refs to store the last scroll position and timeout for hiding navbar
   const lastScrollY = useRef(0);
   const scrollTimeout = useRef(null);
 
-  // إغلاق قائمة الموبايل عند تغيير المسار
+  // Close the mobile menu when the route changes
   useEffect(() => {
     setMenuOpen(false);
   }, [location]);
@@ -24,9 +25,9 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setIsSticky(currentScrollY > 50);
+      setIsSticky(currentScrollY > 50); // Make navbar sticky after scrolling 50px
 
-      // إخفاء النافبار عند التمرير لأسفل بعد 50 بكسل
+      // Hide navbar when scrolling down after 50px
       if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
         setIsHidden(true);
       } else {
@@ -34,7 +35,7 @@ const Navbar = () => {
       }
       lastScrollY.current = currentScrollY;
 
-      // استخدام timeout لإخفاء النافبار بعد 5 ثوانٍ إذا لم يكن الماوس فوقه
+      // Use a timeout to hide the navbar after 5 seconds if not hovered
       if (scrollTimeout.current) {
         clearTimeout(scrollTimeout.current);
       }
@@ -45,14 +46,16 @@ const Navbar = () => {
       }, 5000);
     };
 
+    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
     return () => {
+      // Cleanup event listener and timeout on component unmount
       window.removeEventListener('scroll', handleScroll);
       if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
     };
   }, [isHovered]);
 
-  // دالة مساعدة لتحديد إذا كان الرابط نشطاً بناءً على المسار الحالي
+  // Helper function to check if a link is active based on the current path
   const isActive = (path) => {
     return location.pathname === path;
   };
@@ -65,9 +68,12 @@ const Navbar = () => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="container">
+          {/* Website logo / brand */}
           <Link className="navbar-brand" to="/">
             EatMORE
           </Link>
+
+          {/* Mobile menu toggle button */}
           <button
             className="navbar-toggler"
             type="button"
@@ -77,63 +83,41 @@ const Navbar = () => {
             <span className="line line-2"></span>
             <span className="line line-3"></span>
           </button>
+
+          {/* Navbar links */}
           <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`} id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link
-                  className={`nav-link ${isActive('/') ? 'active' : ''}`}
-                  to="/"
-                >
-                  Home
-                </Link>
+                <Link className={`nav-link ${isActive('/') ? 'active' : ''}`} to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link
-                  className={`nav-link ${isActive('/menu') ? 'active' : ''}`}
-                  to="/menu"
-                >
-                  Menu
-                </Link>
+                <Link className={`nav-link ${isActive('/menu') ? 'active' : ''}`} to="/menu">Menu</Link>
               </li>
               <li className="nav-item">
-                <Link
-                  className={`nav-link ${isActive('/reservation') ? 'active' : ''}`}
-                  to="/reservation"
-                >
-                  Reservation
-                </Link>
+                <Link className={`nav-link ${isActive('/reservation') ? 'active' : ''}`} to="/reservation">Reservation</Link>
               </li>
               <li className="nav-item">
-                <Link
-                  className={`nav-link ${isActive('/gallery') ? 'active' : ''}`}
-                  to="/gallery"
-                >
-                  Gallery
-                </Link>
+                <Link className={`nav-link ${isActive('/gallery') ? 'active' : ''}`} to="/gallery">Gallery</Link>
               </li>
               <li className="nav-item">
-                <Link
-                  className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
-                  to="/contact"
-                >
-                  Contact
-                </Link>
+                <Link className={`nav-link ${isActive('/contact') ? 'active' : ''}`} to="/contact">Contact</Link>
               </li>
             </ul>
+
+            {/* Authentication buttons */}
             <div className="register-btn ms-auto d-flex align-items-center">
-              <Link to="/login" className="btn btn-outline-light me-2">
-                Login
-              </Link>
-              <Link to="/register" className="btn btn-warning">
-                Sign Up
-              </Link>
+              <Link to="/login" className="btn btn-outline-light me-2">Login</Link>
+              <Link to="/register" className="btn btn-warning">Sign Up</Link>
             </div>
+
+            {/* Top bar for smaller screens */}
             <TopBar
               extraClass="top-bar d-lg-none"
               containerClass="container d-flex flex-column align-items-center"
               infoItemClass="myInfoItem"
             />
-            {/* أيقونة الإغلاق لقائمة الموبايل */}
+
+            {/* Close icon for mobile menu */}
             <ion-icon
               name="close-circle-outline"
               className="close-icon"
@@ -148,5 +132,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-

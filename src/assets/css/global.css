@@ -74,3 +74,24 @@ p{
     font-size: 1.25rem;
   }
 }
+
+
+/* --------------------------------- */
+/* Scroll Animation (Sections) */
+/* --------------------------------- */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease-in-out;
+}
+.section1 {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 60px 0;
+  margin-top: 150px;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

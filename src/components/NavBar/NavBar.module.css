@@ -1,26 +1,31 @@
+/* Navbar Styling */
 :global(.navbar) {
   margin-top: 60px;
   padding: 15px 0;
   transition: all 0.3s ease-in-out;
 }
 
+/* Brand Logo Styling */
 :global(.navbar-brand) {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--primary-color) !important;
 }
 
+/* Navigation Links Styling */
 :global(.navbar-nav .nav-link) {
   color: var(--text-color);
   font-weight: 500;
   transition: color 0.3s ease-in-out;
 }
 
+/* Hover and Active Link Effect */
 :global(.navbar-nav .nav-link:hover),
 :global(.navbar-nav .nav-link.active) {
   color: var(--primary-color);
 }
 
+/* Sticky Navbar when Scrolling */
 :global(.sticky-navbar) {
   margin-top: 0 !important;
   background: var(--navbar-bg) !important;
@@ -28,13 +33,16 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* Hidden Navbar (For Scroll Hide Effect) */
 :global(.navbar-hidden) {
   transform: translateY(-100%);
 }
 
 /* --------------------------------- */
-/* Hamburger Menu & Close Icon (مشتركة) */
+/* Hamburger Menu & Close Icon */
 /* --------------------------------- */
+
+/* Animation for Menu Button */
 @keyframes menuBtn {
   0% {
     transform: scaleX(1);
@@ -44,6 +52,7 @@
   }
 }
 
+/* Navbar Toggler (Mobile Menu Button) */
 :global(.navbar-toggler) {
   background: none;
   border: none !important;
@@ -56,6 +65,7 @@
   padding: 10px;
 }
 
+/* Remove Focus Outline */
 :global(.navbar-toggler:focus),
 :global(.navbar-toggler:active) {
   outline: none !important;
@@ -63,6 +73,7 @@
   border: none !important;
 }
 
+/* Menu Button Lines */
 :global(.navbar-toggler .line) {
   width: 30px;
   height: 2px;
@@ -72,6 +83,7 @@
   animation: menuBtn 400ms ease-in-out alternate infinite;
 }
 
+/* Delayed Animations for Other Lines */
 :global(.navbar-toggler .line-2) {
   animation-delay: 150ms;
 }
@@ -80,7 +92,7 @@
   animation-delay: 300ms;
 }
 
-/* Icon لإغلاق قائمة الموبايل */
+/* Close Icon for Mobile Menu */
 :global(.close-icon) {
   font-size: 24px;
   cursor: pointer;
@@ -90,7 +102,12 @@
   display: none;
 }
 
+/* --------------------------------- */
+/* Mobile Navigation Styling */
+/* --------------------------------- */
+
 @media (max-width: 991px) {
+  /* Mobile Navbar Top Bar */
   :global(.navbar-collapse .top-bar) {
     position: relative;
     margin-top: 20px;
@@ -101,6 +118,8 @@
     background-color: var(--dark-bg);
     width: 100%;
   }
+
+  /* Allow Scrolling in Mobile Menu */
   @media (max-width: 991.98px) {
     :global(.navbar-collapse) {
       max-height: 100vh;
@@ -108,24 +127,30 @@
     }
   }
 
+  /* Mobile Top Bar Items */
   :global(.navbar-collapse .top-bar .info-item) {
     margin: 5px 0;
     color: var(--text-color);
   }
 
+  /* Icons in Mobile Top Bar */
   :global(.navbar-collapse .top-bar ion-icon) {
     color: var(--primary-color);
     font-size: 1.5rem;
     margin-right: 5px;
   }
+
+  /* Hide Separator in Mobile View */
   :global(.navbar-collapse .top-bar .separator) {
     display: none;
   }
 
+  /* Reset Margin for Mobile Navbar */
   :global(.navbar) {
     margin-top: inherit;
   }
 
+  /* Full-Screen Mobile Menu */
   :global(.navbar-collapse) {
     background-color: var(--dark-bg);
     position: fixed;
@@ -137,11 +162,13 @@
     z-index: 1100;
   }
 
+  /* Show Mobile Menu when Active */
   :global(.show) {
     transform: translateX(1000px);
     transition: transform 0.3s ease-in-out;
   }
 
+  /* Vertical Separator in Mobile Menu */
   :global(.navbar-collapse)::before {
     position: absolute;
     content: "";
@@ -152,12 +179,14 @@
     right: 0;
   }
 
+  /* Mobile Navigation Items */
   :global(.navbar-nav) {
     position: relative;
     margin-top: 30%;
     padding: 10px;
   }
 
+  /* Separator Below Each Nav Item */
   :global(.navbar-nav .nav-item)::after {
     position: absolute;
     content: "";
@@ -167,11 +196,13 @@
     background-color: var(--separator);
   }
 
+  /* Register Button in Mobile Menu */
   :global(.register-btn) {
     justify-content: center;
     margin-top: 30px;
   }
 
+  /* Show Close Icon in Mobile Menu */
   :global(.close-icon) {
     display: block;
   }

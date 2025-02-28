@@ -1,0 +1,23 @@
+.gallerySection {
+    background-color: #343a40; /* لون الخلفية */
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallerySection h2 {
+    margin-bottom: 30px;
+}
+
+
+.galleryImage {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.galleryImage:hover {
+    transform: scale(1.1);
+}

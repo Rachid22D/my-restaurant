@@ -1,0 +1,37 @@
+/* About Us Section */
+.aboutSection img {
+    width: 500px;
+    height: 500px;
+}
+
+.aboutSection .col-md-6 {
+    margin-bottom: 20px;
+}
+
+.storyText {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.storyText p {
+    flex-grow: 8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
