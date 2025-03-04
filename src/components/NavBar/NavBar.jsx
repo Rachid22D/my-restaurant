@@ -100,6 +100,9 @@ const Navbar = () => {
                 <Link className={`nav-link ${isActive('/gallery') ? 'active' : ''}`} to="/gallery">Gallery</Link>
               </li>
               <li className="nav-item">
+                <Link className={`nav-link ${isActive('/about') ? 'active' : ''}`} to="/about">About Us</Link>
+              </li>
+              <li className="nav-item">
                 <Link className={`nav-link ${isActive('/contact') ? 'active' : ''}`} to="/contact">Contact</Link>
               </li>
             </ul>

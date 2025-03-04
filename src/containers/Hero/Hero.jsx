@@ -76,7 +76,7 @@ const Hero = () => {
         <h1 id="hero-title">{slides[currentSlide].title}</h1>
         <p id="hero-text">{slides[currentSlide].text}</p>
         {/* Using React Router's Link for navigation */}
-        <Link id="hero-btn" to={slides[currentSlide].buttonLink} className={`btn ${styles.btn}`}>
+        <Link id="hero-btn" to={slides[currentSlide].buttonLink} className={`btn btn-warning ${styles.btn}`}>
           {slides[currentSlide].buttonText}
         </Link>
       </div>

@@ -1,0 +1,19 @@
+/* Gallery.module.css */
+
+.galleryItem {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .galleryItem:hover {
+    transform: scale(1.05);
+  }
+  
+  .galleryItem img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  

@@ -6,7 +6,7 @@
 
 .specialSection .col-md-4 {
     color: var(--text-color);
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 10px;

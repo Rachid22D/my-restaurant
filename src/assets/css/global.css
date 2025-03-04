@@ -59,6 +59,9 @@ h1{
 p{
   color: var(--text-color);
 }
+.margin-bottom-20{
+  margin-bottom: 20px;
+}
 
 /* --------------------------------- */
 /* Responsive Design - Common Sections */

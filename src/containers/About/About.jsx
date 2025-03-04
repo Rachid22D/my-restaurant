@@ -6,18 +6,18 @@ const About = () => {
   return (
     <section className={`container my-5 ${styles.aboutSection}`}>
       <div className="row">
-        <div className={`col-md-6 ${styles.storyText}`}>
+        <div className={`col-md-6 margin-bottom-20 ${styles.storyText}`}>
           <h2>Our Story</h2>
           <p>
             Since our opening, EatMORE has been dedicated to crafting delicious
             meals using only the finest ingredients. Our story is one of
             passion, tradition, and culinary excellence.
           </p>
-          <Link to="/about-us" className={styles.btn}>
+          <Link to="/about-us" className={`btn ${styles.btn}`}>
             More About Us
           </Link>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 margin-bottom-20">
           <img
             src="/images/about-banner.jpg"
             className="img-fluid rounded"

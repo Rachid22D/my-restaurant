@@ -15,7 +15,7 @@ const GallerySection = () => {
       <div className="container">
         <div className={`row ${styles.galleryRow}`}>
           {images.map((src, index) => (
-            <div key={index} className="col-md-4">
+            <div key={index} className="col-md-4 margin-bottom-20">
               <img src={src} className={`img-fluid ${styles.galleryImage}`} alt="Gallery" />
             </div>
           ))}

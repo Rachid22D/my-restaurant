@@ -1,0 +1,70 @@
+/* Dish.module.css */
+
+/* تنسيق بطاقة الطلب */
+.orderCard {
+    background-color: var(--dark-bg);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .orderCard:hover {
+    transform: scale(1.02);
+  }
+  
+  /* تنسيق صورة الطبق */
+  .orderCard img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* تنسيق محتوى البطاقة */
+  .orderCard .card-body {
+    padding: 20px;
+  }
+  
+  .orderCard .card-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .orderCard .card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .orderCard .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  /* تنسيق زر تأكيد الطلب */
+  .orderCard .confirm-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  .orderCard .confirm-btn:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* تحسين استجابة الصفحة */
+  @media (max-width: 768px) {
+    .orderCard .card-title {
+      font-size: 1.5rem;
+    }
+    .orderCard .price {
+      font-size: 1rem;
+    }
+  }
+  

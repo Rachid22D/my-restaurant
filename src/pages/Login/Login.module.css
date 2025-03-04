@@ -1,0 +1,65 @@
+/* Login.module.css */
+
+/* تنسيق عام لقسم الدخول 
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark-bg);
+  }
+  */
+  /* تنسيق نموذج الدخول */
+  .loginForm {
+    background-color: var(--dark-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .loginForm .form-label {
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .loginForm .form-control {
+    background-color: var(--bg-color);
+    border: 1px solid var(--separator);
+    color: var(--text-color);
+  }
+  
+  .loginForm .form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+  }
+  
+  /* تنسيق زر الدخول */
+  .loginForm button.btn-warning {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  .loginForm button.btn-warning:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* تنسيق الرابط الخاص بالتسجيل */
+  .loginForm a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  
+  .loginForm a:hover {
+    color: var(--primary-hover);
+  }
+  
+  /* تحسين استجابة الصفحة */
+  @media (max-width: 768px) {
+    .loginForm {
+      padding: 20px;
+    }
+  }
+  

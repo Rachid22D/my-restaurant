@@ -1,0 +1,67 @@
+
+  /* تنسيق نموذج الاتصال */
+  .contactForm {
+    background-color: var(--dark-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contactForm .form-label {
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .contactForm .form-control {
+    background-color: var(--bg-color);
+    border: 1px solid var(--separator);
+    color: var(--text-color);
+  }
+  
+  .contactForm .form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+  }
+  
+  /* تنسيق زر الإرسال */
+  .contactForm button.btn-warning {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  .contactForm button.btn-warning:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* تنسيق معلومات الاتصال */
+  .contactInfo h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .contactInfo p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* تنسيق الخريطة */
+  .map {
+    margin-top: 20px;
+  }
+  
+  .map img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* تحسين استجابة الصفحة */
+  @media (max-width: 768px) {
+    .contactForm {
+      padding: 20px;
+    }
+  }
+  

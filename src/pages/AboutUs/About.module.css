@@ -1,0 +1,33 @@
+/* About.module.css */
+/* Styles Specific to About Us Page */
+
+/* Align content row items to center */
+.aboutSection .row {
+  align-items: center;
+}
+
+/* Style for images */
+.aboutSection img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Style for headings */
+.aboutSection h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.aboutSection h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-top: 20px;
+}
+
+/* Style for paragraphs */
+.aboutSection p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}

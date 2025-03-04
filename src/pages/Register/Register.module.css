@@ -1,0 +1,51 @@
+/* Register.module.css */
+
+/* تنسيق عام لقسم التسجيل */
+.registerSection {
+    /* يمكنك إضافة تنسيقات إضافية هنا إذا رغبت */
+  }
+  
+  /* تنسيق نموذج التسجيل */
+  .registerForm {
+    background-color: var(--dark-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .registerForm .form-label {
+    color: var(--text-color);
+    font-weight: bold;
+  }
+  
+  .registerForm .form-control {
+    background-color: var(--bg-color);
+    border: 1px solid var(--separator);
+    color: var(--text-color);
+  }
+  
+  .registerForm .form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+  }
+  
+  /* تنسيق زر التسجيل */
+  .registerForm button.btn-warning {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  .registerForm button.btn-warning:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* تحسين استجابة الصفحة */
+  @media (max-width: 768px) {
+    .registerForm {
+      padding: 20px;
+    }
+  }
+  

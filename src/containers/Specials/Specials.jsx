@@ -29,11 +29,11 @@ const Specials = () => {
         <h2>{"Today's Special"}</h2>
         <div className="row">
           {specialsData.map((dish) => (
-            <div key={dish.id} className="col-md-4">
+            <div key={dish.id} className="col-md-4 margin-bottom-20">
               <img src={dish.img} className="img-fluid rounded" alt={dish.name} />
               <h4>{dish.name}</h4>
               <p>{dish.time}</p>
-              <Link to="/dish" className="btn btn-warning">
+              <Link to="/dish" className={`btn btn-warning ${styles.btn}`}>
                 Order Now
               </Link>
             </div>

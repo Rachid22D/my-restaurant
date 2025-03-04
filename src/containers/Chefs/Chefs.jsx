@@ -28,7 +28,7 @@ const Chefs = () => {
       <h2>Our Chefs</h2>
       <div className="row">
         {chefs.map((chef) => (
-          <div key={chef.id} className="col-md-4">
+          <div key={chef.id} className="col-md-4 margin-bottom-20">
             <img src={chef.image} className="img-fluid rounded-circle" alt={chef.name} />
             <h4>{chef.name}</h4>
             <p>{chef.role}</p>
