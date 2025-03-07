@@ -82,7 +82,7 @@ p{
 /* --------------------------------- */
 /* Scroll Animation (Sections) */
 /* --------------------------------- */
-section {
+.home section {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.7s ease-in-out;
@@ -94,7 +94,7 @@ section {
   margin-top: 150px;
 }
 
-section.visible {
+.home section.visible {
   opacity: 1;
   transform: translateY(0);
 }

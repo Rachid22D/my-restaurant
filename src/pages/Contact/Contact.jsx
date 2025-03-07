@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="container">
         <h1 className="text-center mb-5">Get in Touch</h1>
         <div className="row">
-          {/* نموذج الاتصال */}
+         
           <div className="col-md-6 mb-4">
             <form action="#" method="post" className={`contact-form ${styles.contactForm}`}>
               <div className="mb-3">

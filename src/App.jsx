@@ -1,7 +1,7 @@
 import {Routes, Route } from "react-router-dom";
 import TopBar from "./components/TopBar/TopBar";
 import Header from "./containers/Header/Header";
-import ScrollAnimation from "./components/ScrollAnimation/ScrollAnimation";
+
 import ImageHoverEffect from "./components/ImageHoverEffect/ImageHoverEffect";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
@@ -17,7 +17,7 @@ import Dish from "./pages/Dish/Dish";
 function App() {
   return (
     <>
-      <ScrollAnimation />
+      
       <ImageHoverEffect />
       <TopBar extraClass={"top-bar d-none d-lg-block py-2 px-3"} />
       <Header />
