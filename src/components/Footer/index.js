@@ -1,0 +1,1 @@
+export {default} from './Footer'; // src/components/Footer/index.js

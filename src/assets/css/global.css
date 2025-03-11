@@ -26,6 +26,33 @@
   --navbar-bg: rgba(0, 0, 0, 0.9);
   --separator: #665b58;
 }
+/* Toggle mode button styles */
+.toggle-mode-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 999;
+  transition: background 0.3s;
+}
+
+.toggle-mode-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+
+/* Dark mode styles using the dark-mode class */
+
+/* Example of applying background to the body */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
 /* --------------------------------- */
 /* Global Styles & Reset */
 /* --------------------------------- */
