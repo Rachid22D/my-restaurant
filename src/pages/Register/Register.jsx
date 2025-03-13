@@ -1,7 +1,7 @@
-
 import { Link } from 'react-router-dom';
 import styles from './Register.module.css';
 
+// Component for the registration page
 const Register = () => {
   return (
     <section className={`section1 register-section py-5 ${styles.registerSection}`}>
@@ -9,6 +9,7 @@ const Register = () => {
         <h1 className="text-center mb-5">Create Your Account</h1>
         <div className="row justify-content-center">
           <div className="col-md-6">
+            {/* Registration form */}
             <form action="#" method="post" className={`register-form ${styles.registerForm}`}>
               <div className="mb-3">
                 <label htmlFor="fullname" className="form-label">Full Name</label>

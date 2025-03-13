@@ -1,4 +1,4 @@
-import React from "react";
+
 import { TopBar , Footer, ImageHoverEffect, ToggleMode } from './components';
 import { Header } from "./containers";
 import AppRoute from './router/AppRoutes';

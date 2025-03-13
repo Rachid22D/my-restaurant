@@ -1,15 +1,17 @@
-
 import styles from './Contact.module.css';
 
 const Contact = () => {
   return (
     <section className={`section1 contact-section py-5 ${styles.contactSection}`}>
       <div className="container">
+        {/* Section heading */}
         <h1 className="text-center mb-5">Get in Touch</h1>
         <div className="row">
          
           <div className="col-md-6 mb-4">
+            {/* Contact form */}
             <form action="#" method="post" className={`contact-form ${styles.contactForm}`}>
+              {/* Name input field */}
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">Your Name</label>
                 <input
@@ -21,6 +23,8 @@ const Contact = () => {
                   required
                 />
               </div>
+              
+              {/* Email input field */}
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">Email Address</label>
                 <input
@@ -32,6 +36,8 @@ const Contact = () => {
                   required
                 />
               </div>
+
+              {/* Subject input field */}
               <div className="mb-3">
                 <label htmlFor="subject" className="form-label">Subject</label>
                 <input
@@ -43,6 +49,8 @@ const Contact = () => {
                   required
                 />
               </div>
+
+              {/* Message textarea */}
               <div className="mb-3">
                 <label htmlFor="message" className="form-label">Message</label>
                 <textarea
@@ -54,6 +62,8 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
+
+              {/* Submit button */}
               <div className="text-center">
                 <button type="submit" className="btn btn-warning">
                   Send Message
@@ -62,7 +72,7 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* معلومات الاتصال */}
+          {/* Contact information section */}
           <div className="col-md-6 mb-4">
             <div className={`contact-info ${styles.contactInfo}`}>
               <h2>Contact Information</h2>
@@ -71,7 +81,8 @@ const Contact = () => {
                 <strong>Phone:</strong> +123 456 789<br />
                 <strong>Email:</strong> info@eatmore.com
               </p>
-              {/* صورة لخريطة الموقع */}
+             
+              {/* Embedded map image (Placeholder) */}
               <div className="map">
                 <img
                   src="images/map-placeholder.jpg"

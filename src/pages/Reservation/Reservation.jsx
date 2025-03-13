@@ -1,5 +1,6 @@
 import styles from './Reservation.module.css';
 
+// Component for the reservation page
 const Reservation = () => {
   return (
     <section className={`section1 reservation-section py-5 ${styles.reservationSection}`}>
@@ -7,6 +8,7 @@ const Reservation = () => {
         <h1 className="text-center mb-5">Make a Reservation</h1>
         <div className="row justify-content-center">
           <div className="col-md-8">
+            {/* Reservation form */}
             <form action="#" method="post" className={`reservation-form ${styles.reservationForm}`}>
               <div className="row mb-3">
                 <div className="col-md-6">

@@ -1,5 +1,5 @@
 // Header.jsx
-import Navbar from "../../components/NavBar/NavBar";
+import {Navbar} from "../../components";
 
 function Header() {
   return (

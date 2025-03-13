@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import MenuItem from './MenuItem';
 
+// Component for displaying a category of menu items
 const MenuCategory = ({ category }) => {
   return (
     <div className="mb-5">
@@ -13,10 +14,13 @@ const MenuCategory = ({ category }) => {
     </div>
   );
 };
+
+// PropTypes for type checking
 MenuCategory.propTypes = {
   category: PropTypes.shape({
     title: PropTypes.string,
     items: PropTypes.array,
   }),
 };
+
 export default MenuCategory;

@@ -1,9 +1,10 @@
-import ScrollAnimation from "../../components/ScrollAnimation/ScrollAnimation";
-import Hero from "../../containers/Hero/Hero";
-import About from "../../containers/About/About";
-import Specials from "../../containers/Specials/Specials";
-import Chefs from "../../containers/Chefs/Chefs";
-import GallerySection from "../../containers/GallerySection/GallerySection";
+/**
+ * Home Page import all the containers and components 
+ * { Hero, About, Specials, Chefs, GallerySection} is containers not pages
+ * { ScrollAnimation } is a component
+ */
+import { ScrollAnimation } from "../../components";
+import { Hero, About, Specials, Chefs, GallerySection} from "../../containers";
 
 function Home() {
   return (

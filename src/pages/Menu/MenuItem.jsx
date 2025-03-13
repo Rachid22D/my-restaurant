@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styles from './Menu.module.css';
 
+// Component for displaying a single menu item
 const MenuItem = ({ item }) => {
   const { img, alt, title, description, price } = item;
   return (
@@ -18,6 +19,7 @@ const MenuItem = ({ item }) => {
   );
 };
 
+// PropTypes for type checking
 MenuItem.propTypes = {
   item: PropTypes.shape({
     img: PropTypes.string,
@@ -27,4 +29,5 @@ MenuItem.propTypes = {
     price: PropTypes.string,
   }),
 };
+
 export default MenuItem;

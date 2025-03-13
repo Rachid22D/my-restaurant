@@ -20,13 +20,11 @@ header .container {
     z-index: 2; /* Higher index to stay above the ::before overlay */
 }
 
-/* Styling for the main heading (h1) in the header */
 header h1 {
     font-size: 3rem;
     font-weight: bold;
 }
 
-/* Styling for the paragraph text in the header */
 header p {
     font-size: 1.2rem;
     margin-bottom: 20px;
@@ -34,23 +32,20 @@ header p {
 
 /* Media query for responsiveness on smaller screens (max-width: 991px) */
 @media (max-width: 991px) {
-    /* Adjust heading font size for smaller screens */
+    
     header h1 {
         font-size: 2.5rem;
     }
 
-    /* Adjust paragraph font size for smaller screens */
     header p {
         font-size: 1rem;
     }
 
-    /* Style the warning button on smaller screens */
     .btn-warning {
         padding: 10px 16px;
         font-size: 0.9rem;
     }
 
-    /* Adjust the font size of secondary headings (h2) for smaller screens */
     h2 {
         font-size: 2rem;
     }

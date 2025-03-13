@@ -1,1 +1,2 @@
-export {default} from './Footer'; // src/components/Footer/index.js
+// src/components/Footer/index.js
+export {default} from './Footer'; 

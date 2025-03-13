@@ -1,5 +1,5 @@
 
-  /* تنسيق نموذج الاتصال */
+ /*** Contact Page Styles ***/
   .contactForm {
     background-color: var(--dark-bg);
     padding: 30px;
@@ -23,7 +23,9 @@
     border-color: var(--primary-color);
   }
   
-  /* تنسيق زر الإرسال */
+  .contactForm .form-control::placeholder {
+    color: var(--text-color);
+  }
   .contactForm button.btn-warning {
     font-size: 1rem;
     padding: 10px 20px;
@@ -36,7 +38,12 @@
     background-color: var(--primary-hover);
   }
   
-  /* تنسيق معلومات الاتصال */
+  .contactInfo {
+    background-color: var(--dark-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
   .contactInfo h2 {
     font-size: 1.8rem;
     color: var(--primary-color);
@@ -48,7 +55,6 @@
     line-height: 1.6;
   }
   
-  /* تنسيق الخريطة */
   .map {
     margin-top: 20px;
   }
@@ -58,7 +64,7 @@
     border-radius: 10px;
   }
   
-  /* تحسين استجابة الصفحة */
+  
   @media (max-width: 768px) {
     .contactForm {
       padding: 20px;

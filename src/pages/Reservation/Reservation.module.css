@@ -1,67 +1,66 @@
 /* Reservation.module.css */
 
-/* تنسيق عام لقسم الحجز */
+/* General styling for the reservation section */
 .reservationSection {
-    /* يمكنك إضافة تنسيقات إضافية هنا إذا رغبت */
-  }
-  
-  /* تنسيق نموذج الحجز */
+  /* Additional styles can be added here */
+}
+
+/* Styling for the reservation form */
+.reservationForm {
+  background-color: var(--dark-bg);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.reservationForm .form-label {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.reservationForm .form-control {
+  background-color: var(--bg-color);
+  border: 1px solid var(--separator);
+  color: var(--text-color);
+}
+
+.reservationForm .form-control:focus {
+  box-shadow: none;
+  border-color: var(--primary-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-color1) !important;
+  opacity: 1 !important;
+}
+
+input[type="text"]::-webkit-calendar-picker-indicator,
+input[type="email"]::-webkit-calendar-picker-indicator,
+input[type="tel"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="number"]::-webkit-calendar-picker-indicator {
+  filter: invert();
+  cursor: pointer;
+}
+
+/* Styling for the reservation button */
+.reservationForm button.btn-warning {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.reservationForm button.btn-warning:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
   .reservationForm {
-    background-color: var(--dark-bg);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
   }
-  
-  .reservationForm .form-label {
-    color: var(--text-color);
-    font-weight: bold;
-  }
-  
-  .reservationForm .form-control {
-    background-color: var(--bg-color);
-    border: 1px solid var(--separator);
-    color: var(--text-color);
-  }
-  
-  .reservationForm .form-control:focus {
-    box-shadow: none;
-    border-color: var(--primary-color);
-  }
-  
-  input::placeholder,
-  textarea::placeholder {
-    color: var(--text-color1) !important;
-    opacity: 1 !important;
-  }
-  
-  input[type="text"]::-webkit-calendar-picker-indicator,
-  input[type="email"]::-webkit-calendar-picker-indicator,
-  input[type="tel"]::-webkit-calendar-picker-indicator,
-  input[type="date"]::-webkit-calendar-picker-indicator,
-  input[type="time"]::-webkit-calendar-picker-indicator,
-  input[type="number"]::-webkit-calendar-picker-indicator {
-    filter: invert();
-    cursor: pointer;
-  }
-  
-  /* زر الحجز */
-  .reservationForm button.btn-warning {
-    font-size: 1rem;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    border: none;
-    transition: background 0.3s ease;
-  }
-  
-  .reservationForm button.btn-warning:hover {
-    background-color: var(--primary-hover);
-  }
-  
-  /* تحسين استجابة الصفحة */
-  @media (max-width: 768px) {
-    .reservationForm {
-      padding: 20px;
-    }
-  }
-  
+}

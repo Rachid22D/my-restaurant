@@ -1,6 +1,6 @@
-
 import styles from "./Chefs.module.css";
 
+// Array of chef objects containing id, name, role, and image
 const chefs = [
   {
     id: 1,
@@ -22,11 +22,13 @@ const chefs = [
   },
 ];
 
+// Functional component to display the chefs
 const Chefs = () => {
   return (
     <section className={`container my-5 text-center ${styles.chefsSection}`}>
       <h2>Our Chefs</h2>
       <div className="row">
+        {/* Map through the chefs array and render each chef's details */}
         {chefs.map((chef) => (
           <div key={chef.id} className="col-md-4 margin-bottom-20">
             <img src={chef.image} className="img-fluid rounded-circle" alt={chef.name} />

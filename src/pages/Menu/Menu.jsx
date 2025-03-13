@@ -1,8 +1,7 @@
-
 import styles from './Menu.module.css';
 import MenuCategory from './MenuCategory';
 
-// بيانات القائمة مع الفئات والعناصر
+// Menu data with categories and items
 const menuData = [
   {
     title: "Appetizers",
@@ -110,11 +109,15 @@ const menuData = [
   },
 ];
 
+// Component for the menu page
 const Menu = () => {
   return (
+    // Section for the menu with styling and padding
     <section className={`section1 menu-section py-5 ${styles.menuSection}`}>
       <div className="container">
+        {/* Title of the menu */}
         <h1 className="text-center mb-5">Our Delicious Menu</h1>
+        {/* Loop through the menu data and render each category */}
         {menuData.map((category, index) => (
           <MenuCategory key={index} category={category} />
         ))}
